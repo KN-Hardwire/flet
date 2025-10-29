@@ -5,6 +5,8 @@
 #include <stdbool.h>
 #include <stdio.h>
 
+#typedef unsigned int uint
+
 // pinout
 #define BUTTON1 ((uint)0)
 #define BUTTON2 ((uint)1)
@@ -54,7 +56,7 @@ int main(void) {
         gpio_init(buttons[i]);
     }
     adc_gpio_init(ADC26);
-    adc_select_input(ADC26);
+    adc_select_input(0);
     gpio_set_function(OUT_VOLUME, GPIO_FUNC_PWM);
     gpio_set_function(OUT_FREQ, GPIO_FUNC_PWM);
 
@@ -79,7 +81,7 @@ int main(void) {
 
 void generate_square_wave(float freq) {
     uint slice_num = pwm_gpio_to_slice_num(OUT_FREQ);
-    uint clk_div = 125000000 / freq / 65536.0;
+    float clk_div = 125000000 / freq / 65536.0;
     if (clk_div < 1) clk_div = 1;
     
     pwm_set_clkdiv(slice_num, clk_div);
