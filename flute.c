@@ -37,14 +37,14 @@ typedef unsigned int uint;
 
 // constants
 #define BUTTON_COUNT 8
-#define MIN_VOLUME s0
+#define MIN_VOLUME 0
 #define MAX_VOLUME 4000
 #define TMP_FIXED 2000      // temp volume for testing
 #define WAVE_SLEEP_TIME 10
 #define DUTY 65535
 
 void generate_square_wave(float freq);
-float get_frequency(uint mask);
+float get_frequency(uint8_t mask);
 
 int main(void) {
     uint buttons[BUTTON_COUNT] = {BUTTON1, BUTTON2, BUTTON3, BUTTON4, BUTTON5, BUTTON6, BUTTON7, BUTTON8};
@@ -91,9 +91,9 @@ void generate_square_wave(float freq) {
     return;
 }
 
-float get_frequency(uint mask) {
+float get_frequency(uint8_t mask) {
 	switch (mask) {
-		case 0b11111111: return NOTE_C4;
+        case 0b11111111: return NOTE_C4;
         case 0b11111110: return NOTE_D4; 
         case 0b11111100: return NOTE_E4;
         case 0b11111000: return NOTE_F4;
