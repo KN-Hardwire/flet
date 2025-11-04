@@ -23,7 +23,7 @@ if (EXISTS ${picoVscode})
     include(${picoVscode})
 endif()
 # ====================================================================================
-set(PICO_BOARD pico_w CACHE STRING "Board type")
+set(PICO_BOARD pico2_w CACHE STRING "Board type")
 
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
@@ -34,14 +34,14 @@ project(flute C CXX ASM)
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
+add_compile_options(-Wall -Wextra -O2)
 
 add_executable(flute 
     flute.c
     )
 
 # pull in common dependencies
-target_link_libraries(flute pico_stdlib hardware_adc hardware_pwm)
-
+target_link_libraries(flute pico_stdlib hardware_adc hardware_pwm)	
 if (PICO_CYW43_SUPPORTED)
     target_link_libraries(flute pico_cyw43_arch_none)
 endif()
