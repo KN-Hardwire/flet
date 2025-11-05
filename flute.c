@@ -39,7 +39,6 @@ typedef unsigned int uint;
 #define BUTTON_COUNT (int)8
 #define MIN_VOLUME 0
 #define MAX_VOLUME 4095
-#define TMP_FIXED 2000      // temp volume for testing
 #define DUTY 65535
 
 void generate_square_wave(const float freq, const int volume);
@@ -63,7 +62,6 @@ int main(void) {
     gpio_set_function(OUT_PIN, GPIO_FUNC_PWM);
 
 	float note_playing = 0.0f;
-	float last_note = 0.0f;
     while (true) {
 		uint8_t button_mask = 0;
         for (register int i = 0; i < BUTTON_COUNT; ++i) {
@@ -72,10 +70,6 @@ int main(void) {
 			}
         }
 		note_playing = get_frequency(button_mask);
-		if (note_playing == 0.0f) {
-			note_playing = last_note;
-		}
-		last_note = note_playing;
 		generate_square_wave(note_playing, get_volume());	
     }
 
