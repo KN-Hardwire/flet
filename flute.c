@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <math.h>
 
 typedef unsigned int uint;
 
@@ -37,9 +38,11 @@ typedef unsigned int uint;
 
 // constants
 #define BUTTON_COUNT (int)8
-#define MIN_VOLUME 0
-#define MAX_VOLUME 4095
 #define DUTY 65535
+#define MAX_VOLUME 4095
+#define BUFFER_SIZE 20
+
+int volume_buffer[BUFFER_SIZE] = {0};
 
 void generate_square_wave(const float freq, const int volume);
 float get_frequency(const uint8_t mask);
@@ -105,8 +108,18 @@ float get_frequency(const uint8_t mask) {
 }
 
 int get_volume(void) {
-	int adc_value = adc_read();
-	return (int)((float)adc_value / MAX_VOLUME * (float)DUTY / 2);
+	int adc_value = adc_read() * 10;
+	for (int i = BUFFER_SIZE - 1; i > 0; i--) {
+		volume_buffer[i] = volume_buffer[i - 1];
+	}
+	volume_buffer[0] = adc_value;
+	int sum = 0;
+	for (int i = 0; i < BUFFER_SIZE; i++) {
+		sum += volume_buffer[i] * volume_buffer[i];
+	}
+	float volume = sqrt(1.0f / BUFFER_SIZE * sum);
+
+	return (int)(volume / MAX_VOLUME * (float)DUTY / 2);
 }
 
 float nonstandard_mask(const uint8_t mask) {
