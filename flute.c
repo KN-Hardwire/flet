@@ -4,23 +4,22 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdint.h>
 #include <math.h>
 
-typedef unsigned int uint;
+// Pin Configuration
+#define BUTTON1     ((uint8_t)15)
+#define BUTTON2     ((uint8_t)14)
+#define BUTTON3     ((uint8_t)13)
+#define BUTTON4     ((uint8_t)12)
+#define BUTTON5     ((uint8_t)11)
+#define BUTTON6     ((uint8_t)10)
+#define BUTTON7     ((uint8_t)9)
+#define BUTTON8     ((uint8_t)8)
+#define ADC26       ((uint8_t)26)
+#define OUT_PIN		((uint8_t)16)
 
-// pinout
-#define BUTTON1     ((uint)15)
-#define BUTTON2     ((uint)14)
-#define BUTTON3     ((uint)13)
-#define BUTTON4     ((uint)12)
-#define BUTTON5     ((uint)11)
-#define BUTTON6     ((uint)10)
-#define BUTTON7     ((uint)9)
-#define BUTTON8     ((uint)8)
-#define ADC26       ((uint)26)
-#define OUT_PIN		((uint)16)
-
-// note frequencies
+// Note Frequencies [Hz]
 #define NOTE_C4     261.63
 #define NOTE_CS4    277.18
 #define NOTE_D4     293.66
@@ -36,23 +35,23 @@ typedef unsigned int uint;
 #define NOTE_C5     523.25
 #define NOTE_D5     587.33
 
-// constants
-#define BUTTON_COUNT (int)8
-#define DUTY 65535
-#define MAX_VOLUME 4095
-#define BUFFER_SIZE 20
+// Constants
+#define BUTTON_COUNT (uint8_t)  8
+#define DUTY		 (uint32_t) 65535
+#define MAX_VOLUME				4095.0f
+#define BUFFER_SIZE  (uint8_t)  20
 
-int volume_buffer[BUFFER_SIZE] = {0};
+uint16_t volume_buffer[BUFFER_SIZE] = {0};
 
-void generate_square_wave(const float freq, const int volume);
+void generate_square_wave(const float freq, const uint16_t volume);
 float get_frequency(const uint8_t mask);
-int get_volume(void);
+uint16_t get_volume(void);
 float nonstandard_mask(const uint8_t mask);
 
 int main(void) {
-    const uint buttons[BUTTON_COUNT] = {BUTTON1, BUTTON2, BUTTON3, BUTTON4, BUTTON5, BUTTON6, BUTTON7, BUTTON8};
+    const uint16_t buttons[BUTTON_COUNT] = {BUTTON1, BUTTON2, BUTTON3, BUTTON4, BUTTON5, BUTTON6, BUTTON7, BUTTON8};
 
-    for (register int i = 0; i < BUTTON_COUNT; ++i) {
+    for (uint8_t i = 0; i < BUTTON_COUNT; ++i) {
 		gpio_init(buttons[i]);
 		gpio_set_dir(buttons[i], GPIO_IN);
 		gpio_pull_up(buttons[i]);
@@ -67,7 +66,7 @@ int main(void) {
 	float note_playing = 0.0f;
     while (true) {
 		uint8_t button_mask = 0;
-        for (register int i = 0; i < BUTTON_COUNT; ++i) {
+        for (uint8_t i = 0; i < BUTTON_COUNT; ++i) {
 			if (!gpio_get(buttons[i])) {
 				button_mask |= (1 << i);
 			}
@@ -79,9 +78,9 @@ int main(void) {
     return EXIT_SUCCESS;
 }
 
-void generate_square_wave(const float freq, const int volume) {
-    const uint slice_num = pwm_gpio_to_slice_num(OUT_PIN);
-    float clk_div = 125000000.0f / freq / (DUTY + 1);
+void generate_square_wave(const float freq, const uint16_t volume) {
+    const uint8_t slice_num = pwm_gpio_to_slice_num(OUT_PIN);
+	float clk_div = (125000000.0f / (DUTY + 1)) / freq;
     if (clk_div < 1.0f) clk_div = 1.0f;
     
     pwm_set_clkdiv(slice_num, clk_div);
@@ -107,24 +106,27 @@ float get_frequency(const uint8_t mask) {
 	}
 }
 
-int get_volume(void) {
-	int adc_value = adc_read() * 10;
-	for (int i = BUFFER_SIZE - 1; i > 0; i--) {
+uint16_t get_volume(void) {
+	uint16_t adc_value = adc_read();
+
+	/* READING VOLUME FROM ADC VALUE NEEDS TESTING */
+	for (uint8_t i = BUFFER_SIZE - 1; i > 0; i--) {
 		volume_buffer[i] = volume_buffer[i - 1];
 	}
 	volume_buffer[0] = adc_value;
-	int sum = 0;
-	for (int i = 0; i < BUFFER_SIZE; i++) {
+	uint32_t sum = 0;
+	for (uint8_t i = 0; i < BUFFER_SIZE; i++) {
 		sum += volume_buffer[i] * volume_buffer[i];
 	}
 	float volume = sqrt(1.0f / BUFFER_SIZE * sum);
+	/* READING VOLUME FROM ADC VALUE NEEDS TESTING */
 
-	return (int)(volume / MAX_VOLUME * (float)DUTY / 2);
+	return (uint16_t)(volume / MAX_VOLUME * (float)DUTY / 2);
 }
 
 float nonstandard_mask(const uint8_t mask) {
 	uint8_t check_mask = 0b10000000;
-	for (register int i = 0; i < BUTTON_COUNT; ++i) {
+	for (uint8_t i = 0; i < BUTTON_COUNT; ++i) {
 		if ((mask & check_mask) != check_mask) {
 			check_mask = 0b11111111;
 			check_mask = check_mask << (BUTTON_COUNT - i);
