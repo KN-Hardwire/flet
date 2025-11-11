@@ -1,0 +1,251 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "9ae53f79-8ce2-4a44-ba8e-dca375125c34")
+	(paper "A4")
+	(lib_symbols)
+	(rectangle
+		(start 12.446 13.716)
+		(end 175.26 196.596)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 1adcf2f1-11e1-4897-b15e-fedb79eb6101)
+	)
+	(rectangle
+		(start 14.986 15.494)
+		(end 30.226 21.59)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 26f6e7d5-ebdd-4d19-aec8-255653e4d5c4)
+	)
+	(rectangle
+		(start 177.292 16.764)
+		(end 207.01 22.352)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 807829e3-3ad6-45bc-8590-9fe6a5ca590b)
+	)
+	(rectangle
+		(start 14.478 105.41)
+		(end 35.306 111.506)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 8a28f366-1422-4e8f-94e2-6a19280482d2)
+	)
+	(rectangle
+		(start 175.26 13.716)
+		(end 282.956 166.37)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid a25bb1d3-e082-416f-b12a-2dca2c37a3a2)
+	)
+	(rectangle
+		(start 12.192 102.87)
+		(end 175.26 196.596)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid fb8a256e-32d2-4d02-8404-4639b2df2d90)
+	)
+	(text "MICROPHONE"
+		(exclude_from_sim no)
+		(at 24.638 108.458 0)
+		(effects
+			(font
+				(size 1.778 1.778)
+				(thickness 0.254)
+				(bold yes)
+			)
+		)
+		(uuid "60ae8ba8-ebb2-496c-bdee-39d08b181ab5")
+	)
+	(text "BUTTONS"
+		(exclude_from_sim no)
+		(at 22.606 18.796 0)
+		(effects
+			(font
+				(size 1.778 1.778)
+				(thickness 0.254)
+				(bold yes)
+			)
+		)
+		(uuid "6213a654-a121-496c-b02e-7dc670647bba")
+	)
+	(text "RASPBERRY_PI_PIKO"
+		(exclude_from_sim no)
+		(at 192.024 19.812 0)
+		(effects
+			(font
+				(size 1.778 1.778)
+				(thickness 0.254)
+				(bold yes)
+			)
+		)
+		(uuid "f048cac0-de82-4eba-9641-056684864ff2")
+	)
+	(sheet
+		(at 200.152 58.166)
+		(size 58.42 63.754)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "739c4558-e5ce-473d-85db-8208f7847074")
+		(property "Sheetname" "RASPBERRY_PI_PICO"
+			(at 200.152 57.4544 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "./raspberry.kicad_sch"
+			(at 200.152 122.5046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "flute"
+				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 62.23 25.4)
+		(size 58.166 65.024)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "93441b83-95de-4b83-83db-c3d15de6c5e9")
+		(property "Sheetname" "BUTTONS"
+			(at 62.23 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "./buttons.kicad_sch"
+			(at 62.23 91.0086 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "flute"
+				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 62.738 115.824)
+		(size 58.928 64.008)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "cda1d51a-1e58-4706-97d6-d75ab700686a")
+		(property "Sheetname" "MICROPHONE"
+			(at 62.738 115.1124 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "./microphone.kicad_sch"
+			(at 62.738 180.4166 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "flute"
+				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
