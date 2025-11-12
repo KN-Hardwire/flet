@@ -678,7 +678,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_Omron_B3FS-100xP"
+		(property "Footprint" "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
 			(at 208.28 92.71 0)
 			(effects
 				(font
@@ -746,7 +746,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_Omron_B3FS-100xP"
+		(property "Footprint" "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
 			(at 128.27 92.71 0)
 			(effects
 				(font
@@ -814,7 +814,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_Omron_B3FS-100xP"
+		(property "Footprint" "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
 			(at 109.22 92.71 0)
 			(effects
 				(font
@@ -882,7 +882,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_Omron_B3FS-100xP"
+		(property "Footprint" "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
 			(at 147.32 92.71 0)
 			(effects
 				(font
@@ -1016,7 +1016,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_Omron_B3FS-100xP"
+		(property "Footprint" "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
 			(at 167.64 92.71 0)
 			(effects
 				(font
@@ -1084,7 +1084,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS647_Sx38"
+		(property "Footprint" "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
 			(at 71.12 92.71 0)
 			(effects
 				(font
@@ -1161,7 +1161,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_Omron_B3FS-100xP"
+		(property "Footprint" "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
 			(at 187.96 92.71 0)
 			(effects
 				(font
@@ -1229,7 +1229,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_Omron_B3FS-100xP"
+		(property "Footprint" "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
 			(at 90.17 92.71 0)
 			(effects
 				(font
