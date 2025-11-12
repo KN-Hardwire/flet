@@ -1,11 +1,4 @@
-# Flet
-This repository holds the code for KN HARDWIRE electronic flute project.
-
-## Physical structure
-The program is executed by Raspberry Pi Pico microcontroller. There are following modules connected:
-- Microphone
-- Buttons (x8)
-- Audio speaker
+# Software
 
 ## Dependencies
 - CMake
