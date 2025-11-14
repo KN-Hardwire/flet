@@ -553,7 +553,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 87.63) (xy 182.88 87.63)
+			(xy 163.83 87.63) (xy 186.69 87.63)
 		)
 		(stroke
 			(width 0)
@@ -611,18 +611,27 @@
 		)
 		(uuid "faf1bf2c-a30f-45b1-82d5-38c56d78986d")
 	)
-	(hierarchical_label "GPIO11"
+	(global_label "GPIO11"
 		(shape input)
-		(at 182.88 87.63 0)
+		(at 186.69 87.63 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
 			)
 			(justify left)
 		)
-		(uuid "0f5cb12d-f182-4c41-986c-1b02f8de8777")
+		(uuid "d3a9a992-602b-40b5-a733-9bbf9d652e85")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 196.5695 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
