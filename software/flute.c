@@ -8,38 +8,39 @@
 #include <math.h>
 
 // Pin Configuration
-#define BUTTON1     ((uint8_t)15)
-#define BUTTON2     ((uint8_t)14)
-#define BUTTON3     ((uint8_t)13)
-#define BUTTON4     ((uint8_t)12)
-#define BUTTON5     ((uint8_t)11)
-#define BUTTON6     ((uint8_t)10)
-#define BUTTON7     ((uint8_t)9)
-#define BUTTON8     ((uint8_t)8)
-#define ADC26       ((uint8_t)26)
-#define OUT_PIN		((uint8_t)16)
+#define BUTTON1     ((uint8_t) 15)
+#define BUTTON2     ((uint8_t) 14)
+#define BUTTON3     ((uint8_t) 13)
+#define BUTTON4     ((uint8_t) 12)
+#define BUTTON5     ((uint8_t) 11)
+#define BUTTON6     ((uint8_t) 10)
+#define BUTTON7     ((uint8_t) 9)
+#define BUTTON8     ((uint8_t) 8)
+
+#define ADC26       ((uint8_t) 26)
+#define OUT_PIN		((uint8_t) 16)
 
 // Note Frequencies [Hz]
-#define NOTE_C4     261.63
-#define NOTE_CS4    277.18
-#define NOTE_D4     293.66
-#define NOTE_DS4    311.13
-#define NOTE_E4     329.63
-#define NOTE_F4     349.23
-#define NOTE_FS4    369.99
-#define NOTE_G4     392.00
-#define NOTE_GS4    415.30
-#define NOTE_A4     440.00
-#define NOTE_AS4    466.16
-#define NOTE_B4     493.88
-#define NOTE_C5     523.25
-#define NOTE_D5     587.33
+#define NOTE_C4     ((float) 261.63)
+#define NOTE_CS4    ((float) 277.18)
+#define NOTE_D4     ((float) 293.66)
+#define NOTE_DS4    ((float) 311.13)
+#define NOTE_E4     ((float) 329.63)
+#define NOTE_F4     ((float) 349.23)
+#define NOTE_FS4    ((float) 369.99)
+#define NOTE_G4     ((float) 392.00)
+#define NOTE_GS4    ((float) 415.30)
+#define NOTE_A4     ((float) 440.00)
+#define NOTE_AS4    ((float) 466.16)
+#define NOTE_B4     ((float) 493.88)
+#define NOTE_C5     ((float) 523.25)
+#define NOTE_D5     ((float) 587.33)
 
 // Constants
-#define BUTTON_COUNT (uint8_t)  8
-#define DUTY		 (uint32_t) 65535
-#define MAX_VOLUME				4095.0f
-#define BUFFER_SIZE  (uint8_t)  20
+#define BUTTON_COUNT ((uint8_t) 8)
+#define DUTY		 ((uint32_t) 65535)
+#define MAX_VOLUME   ((float) 4095.0)
+#define BUFFER_SIZE  ((uint8_t) 20)
 
 uint16_t volume_buffer[BUFFER_SIZE] = {0};
 
@@ -51,7 +52,7 @@ float nonstandard_mask(const uint8_t mask);
 int main(void) {
     const uint16_t buttons[BUTTON_COUNT] = {BUTTON1, BUTTON2, BUTTON3, BUTTON4, BUTTON5, BUTTON6, BUTTON7, BUTTON8};
 
-    for (uint8_t i = 0; i < BUTTON_COUNT; ++i) {
+    for (register uint8_t i = 0; i < BUTTON_COUNT; ++i) {
 		gpio_init(buttons[i]);
 		gpio_set_dir(buttons[i], GPIO_IN);
 		gpio_pull_up(buttons[i]);
@@ -66,7 +67,7 @@ int main(void) {
 	float note_playing = 0.0f;
     while (true) {
 		uint8_t button_mask = 0;
-        for (uint8_t i = 0; i < BUTTON_COUNT; ++i) {
+        for (register uint8_t i = 0; i < BUTTON_COUNT; ++i) {
 			if (!gpio_get(buttons[i])) {
 				button_mask |= (1 << i);
 			}
@@ -80,6 +81,7 @@ int main(void) {
 
 void generate_square_wave(const float freq, const uint16_t volume) {
     const uint8_t slice_num = pwm_gpio_to_slice_num(OUT_PIN);
+    //zamienic 125000000.0f na makro
 	float clk_div = (125000000.0f / (DUTY + 1)) / freq;
     if (clk_div < 1.0f) clk_div = 1.0f;
     
@@ -110,12 +112,12 @@ uint16_t get_volume(void) {
 	uint16_t adc_value = adc_read();
 
 	/* READING VOLUME FROM ADC VALUE NEEDS TESTING */
-	for (uint8_t i = BUFFER_SIZE - 1; i > 0; i--) {
+	for (register uint8_t i = BUFFER_SIZE - 1; i > 0; --i) {
 		volume_buffer[i] = volume_buffer[i - 1];
 	}
 	volume_buffer[0] = adc_value;
 	uint32_t sum = 0;
-	for (uint8_t i = 0; i < BUFFER_SIZE; i++) {
+	for (register uint8_t i = 0; i < BUFFER_SIZE; ++i) {
 		sum += volume_buffer[i] * volume_buffer[i];
 	}
 	float volume = sqrt(1.0f / BUFFER_SIZE * sum);
@@ -126,7 +128,7 @@ uint16_t get_volume(void) {
 
 float nonstandard_mask(const uint8_t mask) {
 	uint8_t check_mask = 0b10000000;
-	for (uint8_t i = 0; i < BUTTON_COUNT; ++i) {
+	for (register uint8_t i = 0; i < BUTTON_COUNT; ++i) {
 		if ((mask & check_mask) != check_mask) {
 			check_mask = 0b11111111;
 			check_mask = check_mask << (BUTTON_COUNT - i);
