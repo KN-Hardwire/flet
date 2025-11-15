@@ -130,13 +130,13 @@
 	(footprint "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
 		(layer "F.Cu")
 		(uuid "0c21ede4-aa4e-4830-85ae-168cd5114619")
-		(at 207.645 128.85)
+		(at 194.375 128.15)
 		(descr "Tactile switch, 6x6 mm, H4.3 mm, 6.5 mm pitch, https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf")
 		(tags "Omron B3F-10xx SPST 1P1T")
 		(property "Reference" "SW4"
 			(at 3.25 -2.05 0)
 			(layer "F.SilkS")
-			(uuid "acb8de32-06d2-4d0d-a6bc-f77d25c9a31c")
+			(uuid "48903c12-a3aa-4c36-be77-f28248128645")
 			(effects
 				(font
 					(size 1 1)
@@ -147,7 +147,7 @@
 		(property "Value" "F"
 			(at 3.25 6.5 0)
 			(layer "F.Fab")
-			(uuid "9e5bb271-d1a2-4584-bfee-303bd4aec9fd")
+			(uuid "498a51dc-64ce-4fd0-b7d2-e112bcb1c067")
 			(effects
 				(font
 					(size 1 1)
@@ -160,7 +160,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "754b441b-d721-43bd-9971-ed7e2cb8759b")
+			(uuid "b80afc87-6ae6-43e6-8e59-608ace876f78")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -173,7 +173,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "7a84c5ce-da4e-432d-b4c4-0f4d7b710548")
+			(uuid "08810460-aaf6-4f14-a62c-7421f4bfb10e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -787,13 +787,13 @@
 	(footprint "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
 		(layer "F.Cu")
 		(uuid "25724700-5eaa-479f-846a-a39295191878")
-		(at 238.252 128.596)
+		(at 255.458333 128.15)
 		(descr "Tactile switch, 6x6 mm, H4.3 mm, 6.5 mm pitch, https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf")
 		(tags "Omron B3F-10xx SPST 1P1T")
 		(property "Reference" "SW6"
 			(at 3.25 -2.05 0)
 			(layer "F.SilkS")
-			(uuid "40a2d729-e75e-4a8d-ae31-0749429b1c0d")
+			(uuid "0537b600-7b4c-4302-8b84-5b0be69bfaee")
 			(effects
 				(font
 					(size 1 1)
@@ -804,7 +804,7 @@
 		(property "Value" "A"
 			(at 3.25 6.5 0)
 			(layer "F.Fab")
-			(uuid "f0898f73-92cf-4eba-9b59-fd0d7a5b1912")
+			(uuid "e2b0fc76-5eb3-434b-bd59-ff3179391de1")
 			(effects
 				(font
 					(size 1 1)
@@ -817,7 +817,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "b840ffe5-b6fe-48c5-b21f-b7f0beab41c1")
+			(uuid "843e5dc8-030e-41c9-93af-c02c1975cada")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -830,7 +830,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "3d73f8e6-0dcc-4cd5-b147-91b0ef0a6090")
+			(uuid "31aafd30-241e-4b9a-b373-8e0d47b21685")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1643,13 +1643,13 @@
 	(footprint "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
 		(layer "F.Cu")
 		(uuid "3e39a220-5ad0-4692-a67c-ecf0d38f196f")
-		(at 165.1 128.977)
+		(at 102.75 128.15)
 		(descr "Tactile switch, 6x6 mm, H4.3 mm, 6.5 mm pitch, https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf")
 		(tags "Omron B3F-10xx SPST 1P1T")
 		(property "Reference" "SW1"
 			(at 3.25 -2.05 0)
 			(layer "F.SilkS")
-			(uuid "b58ff00c-af46-4ce4-a6b3-052dc12a32c9")
+			(uuid "40a27d63-0cd2-47d9-b955-5b362b1fd17a")
 			(effects
 				(font
 					(size 1 1)
@@ -1660,7 +1660,7 @@
 		(property "Value" "C"
 			(at 3.25 6.5 0)
 			(layer "F.Fab")
-			(uuid "7b439fa7-01c1-4c30-9a11-91b79e5411dc")
+			(uuid "ad3f1cf5-95ee-40fd-a3cb-1af1f24a5e48")
 			(effects
 				(font
 					(size 1 1)
@@ -1673,7 +1673,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "1b4b51ad-2492-40a9-8d32-9e712aece0de")
+			(uuid "8faccb3c-a1f7-478e-b413-bdc290e8c90a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1686,7 +1686,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "2f049ca1-0c29-4df6-b39e-b9e581094c95")
+			(uuid "17e93482-988a-4bf0-8f41-52a2001ecf1c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1915,13 +1915,13 @@
 	(footprint "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
 		(layer "F.Cu")
 		(uuid "65a29155-b524-4ca0-bf31-1b8afe2ef235")
-		(at 284.047 133.822 180)
+		(at 124.520834 132.65 180)
 		(descr "Tactile switch, 6x6 mm, H4.3 mm, 6.5 mm pitch, https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf")
 		(tags "Omron B3F-10xx SPST 1P1T")
 		(property "Reference" "SW8"
 			(at 3.25 -2.05 0)
 			(layer "F.SilkS")
-			(uuid "907fdb71-1e67-4ce4-a9e8-ad1e2b26405f")
+			(uuid "9f0b00df-d360-4402-9ac7-a77a4ddc62fd")
 			(effects
 				(font
 					(size 1 1)
@@ -1932,7 +1932,7 @@
 		(property "Value" "OCTAVE?"
 			(at 3.25 6.5 0)
 			(layer "F.Fab")
-			(uuid "d4a44b39-44ea-444d-932a-08a52d3964f3")
+			(uuid "8584c95a-6a7d-4f1a-bb31-461800fc6f9b")
 			(effects
 				(font
 					(size 1 1)
@@ -1945,7 +1945,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "353cd47a-1b0f-4402-84b7-ebb04b4b1c6b")
+			(uuid "495be4ef-dec6-4429-a118-2352a038e30b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1958,7 +1958,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "00193191-8512-457a-ad84-795e1d874649")
+			(uuid "c19c49a2-d310-4781-85a9-735240b2a7ec")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2572,13 +2572,13 @@
 	(footprint "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
 		(layer "F.Cu")
 		(uuid "7c5f1c84-50bb-4a79-b760-958d6de8171f")
-		(at 194.564 128.723)
+		(at 163.833333 128.15)
 		(descr "Tactile switch, 6x6 mm, H4.3 mm, 6.5 mm pitch, https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf")
 		(tags "Omron B3F-10xx SPST 1P1T")
 		(property "Reference" "SW3"
 			(at 3.25 -2.05 0)
 			(layer "F.SilkS")
-			(uuid "41c205c3-5278-4b0a-b4f0-1f62a4afc5bc")
+			(uuid "e1515f5a-25d7-48ab-8f33-939a00b783ae")
 			(effects
 				(font
 					(size 1 1)
@@ -2589,7 +2589,7 @@
 		(property "Value" "E"
 			(at 3.25 6.5 0)
 			(layer "F.Fab")
-			(uuid "9f47922d-c8cf-4820-bf51-1bafad75d0df")
+			(uuid "bc604ca4-b4c5-4e06-97e4-1934039bd44e")
 			(effects
 				(font
 					(size 1 1)
@@ -2602,7 +2602,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "aa46664d-e72a-4d6e-8241-d80290d4a21d")
+			(uuid "71ff2ab5-0606-4dd2-b6b0-b55fd8977f2b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2615,7 +2615,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "a0233802-764a-4128-a6e0-2dc7720c410e")
+			(uuid "2ff92f4d-6a14-4948-8059-23404fa12e5e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5009,13 +5009,13 @@
 	(footprint "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
 		(layer "F.Cu")
 		(uuid "bb4d3d1e-2312-446c-83ce-f1ee35434a93")
-		(at 221.032 128.505)
+		(at 224.916667 128.15)
 		(descr "Tactile switch, 6x6 mm, H4.3 mm, 6.5 mm pitch, https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf")
 		(tags "Omron B3F-10xx SPST 1P1T")
 		(property "Reference" "SW5"
 			(at 3.25 -2.05 0)
 			(layer "F.SilkS")
-			(uuid "b669a6e9-342b-45e4-87fb-30cac7a18b8f")
+			(uuid "fde3c81b-f9e3-46cc-ab59-2d549508f5a7")
 			(effects
 				(font
 					(size 1 1)
@@ -5026,7 +5026,7 @@
 		(property "Value" "G"
 			(at 3.25 6.5 0)
 			(layer "F.Fab")
-			(uuid "fceea064-5e27-4ade-85c3-78e2ab249e10")
+			(uuid "34126517-fafc-48e1-b0ab-6b5cc96e0f82")
 			(effects
 				(font
 					(size 1 1)
@@ -5039,7 +5039,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "58d27d0d-b19f-4153-829d-603446b68d57")
+			(uuid "3b9565a9-99e4-4970-a4cb-a0e8c16e1e5e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5052,7 +5052,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "868f613f-c703-48fb-a03a-8cfb3a10521d")
+			(uuid "d477f259-ae13-4844-8a0c-46162f3c77e3")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5431,13 +5431,13 @@
 	(footprint "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
 		(layer "F.Cu")
 		(uuid "c498bae8-92c6-4efa-bd05-679facf5e083")
-		(at 255.143 128.596)
+		(at 286 128.15)
 		(descr "Tactile switch, 6x6 mm, H4.3 mm, 6.5 mm pitch, https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf")
 		(tags "Omron B3F-10xx SPST 1P1T")
 		(property "Reference" "SW7"
 			(at 3.25 -2.05 0)
 			(layer "F.SilkS")
-			(uuid "8489fed9-f534-425d-8c51-56d5e999e81f")
+			(uuid "c7287492-8293-42e2-a120-6f1faa15567f")
 			(effects
 				(font
 					(size 1 1)
@@ -5448,7 +5448,7 @@
 		(property "Value" "H"
 			(at 3.25 6.5 0)
 			(layer "F.Fab")
-			(uuid "c5b42f9e-7020-4a27-9ab6-bc6215579842")
+			(uuid "c7692eeb-6df6-4514-9473-ff0c63733dd1")
 			(effects
 				(font
 					(size 1 1)
@@ -5461,7 +5461,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "2da4c6df-81e1-4d1c-92f0-49bd5e7283e8")
+			(uuid "425f7e8e-eb42-4acb-a6c4-9fa5c07c9879")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5474,7 +5474,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "30529650-00ff-4ea5-9206-6732594db9ae")
+			(uuid "92ac09b8-2505-48c9-95e6-036336d720ce")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6768,13 +6768,13 @@
 	(footprint "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
 		(layer "F.Cu")
 		(uuid "e9593446-678b-461b-a7d6-c1ce2160b088")
-		(at 180.011 129.013)
+		(at 133.291667 128.15)
 		(descr "Tactile switch, 6x6 mm, H4.3 mm, 6.5 mm pitch, https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf")
 		(tags "Omron B3F-10xx SPST 1P1T")
 		(property "Reference" "SW2"
 			(at 3.25 -2.05 0)
 			(layer "F.SilkS")
-			(uuid "ec55c150-e00b-4145-9a91-b284230bfd90")
+			(uuid "31238032-e901-4039-84dc-e8effe13aa83")
 			(effects
 				(font
 					(size 1 1)
@@ -6785,7 +6785,7 @@
 		(property "Value" "D"
 			(at 3.25 6.5 0)
 			(layer "F.Fab")
-			(uuid "aa8d9377-bd47-433c-ab6b-4f82741d5883")
+			(uuid "043ee6cb-00d9-44fb-a363-89ac716f50c1")
 			(effects
 				(font
 					(size 1 1)
@@ -6798,7 +6798,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "492f7991-3e5a-4bcb-8e1a-754bb53ad621")
+			(uuid "3ad31c0f-ebb0-47a1-a76b-02b35faecf96")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6811,7 +6811,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "f0928792-9828-47be-9672-aca00be1e686")
+			(uuid "01b53a94-cf6a-4c3a-9ce8-896f41218fa0")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7981,7 +7981,7 @@
 	)
 	(gr_rect
 		(start 64.2 120.4)
-		(end 344.2 140.4)
+		(end 294.2 140.4)
 		(stroke
 			(width 0.05)
 			(type default)
