@@ -6,12 +6,12 @@
 - pico-sdk for C/C++ installed locally (with necessary modules)
 
 ## Build
-First, make sure your OS recognizes the path to pico-sdk. On Linux/MacOS:
+Initialize pico-sdk and its submodules:
 ```
-export PICO_SDK_PATH=/your/path/to/pico-sdk
+git submodule update --init --recursive
 ```
 
-From the project directory, create a build directory and from it run the .cmake file:
+Create a build directory and from it run cmake: 
 ```
 mkdir build
 cd build
