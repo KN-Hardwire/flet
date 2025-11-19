@@ -6,10 +6,7 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# Initialise pico_sdk from installed location
-# (note this can come from environment, CMake cache etc)
-
-# == DO NOT EDIT THE FOLLOWING LINES for the Raspberry Pi Pico VS Code Extension to work ==
+# == DO NOT EDIT (VS Code extension integration) ==
 if(WIN32)
     set(USERHOME $ENV{USERPROFILE})
 else()
@@ -22,7 +19,8 @@ set(picoVscode ${USERHOME}/.pico-sdk/cmake/pico-vscode.cmake)
 if (EXISTS ${picoVscode})
     include(${picoVscode})
 endif()
-# ====================================================================================
+# ================================================
+
 set(PICO_BOARD pico_w CACHE STRING "Board type")
 
 # Pull in Raspberry Pi Pico SDK (must be before project)
@@ -30,23 +28,43 @@ include(pico-sdk/pico_sdk_init.cmake)
 
 project(flute C CXX ASM)
 
-# Initialise the Raspberry Pi Pico SDK
+# Initialise SDK
 pico_sdk_init()
 
-# Add executable. Default name is the project name, version 0.1
+# Compiler options
 add_compile_options(-Wall -Wextra -O2)
 
-add_executable(flute 
-    flute.c
-    )
+# =====================================================
+# Add include and source directories
+# =====================================================
 
-# pull in common dependencies
-target_link_libraries(flute pico_stdlib hardware_adc hardware_pwm)	
+# Add include/ to header search paths
+include_directories(${CMAKE_CURRENT_LIST_DIR}/include)
+
+# Collect all .c files from source/
+file(GLOB FLUTE_SOURCES
+    ${CMAKE_CURRENT_LIST_DIR}/source/*.c
+)
+
+# (optional) also add main flute.c if it is not in /source
+# file(GLOB FLUTE_SOURCES ${FLUTE_SOURCES} ${CMAKE_CURRENT_LIST_DIR}/flute.c)
+
+# Create executable
+add_executable(flute
+    ${FLUTE_SOURCES}
+)
+
+# Link libraries
+target_link_libraries(flute
+    pico_stdlib
+    hardware_adc
+    hardware_pwm
+)
+
 if (PICO_CYW43_SUPPORTED)
     target_link_libraries(flute pico_cyw43_arch_none)
 endif()
 
-# create map/bin/hex file etc.
+# Generate map/bin/hex files
 pico_add_extra_outputs(flute)
 
-# add url via pico_set_program_url
