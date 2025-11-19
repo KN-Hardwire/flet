@@ -1,0 +1,38 @@
+name: Build project
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y cmake gcc-arm-none-eabi
+
+      - name: Configure CMake
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+
+      - name: Build project
+        run: |
+          cd build
+          make
+
+      - name: Upload .uf2 firmware
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware
+          path: build/*.uf2
+
