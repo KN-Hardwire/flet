@@ -21,7 +21,7 @@ if (EXISTS ${picoVscode})
 endif()
 # ================================================
 
-set(PICO_BOARD pico_w CACHE STRING "Board type")
+set(PICO_BOARD pico2_w CACHE STRING "Board type")
 
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico-sdk/pico_sdk_init.cmake)
@@ -64,6 +64,9 @@ target_link_libraries(flute
 if (PICO_CYW43_SUPPORTED)
     target_link_libraries(flute pico_cyw43_arch_none)
 endif()
+
+pico_enable_stdio_usb(flute 1)
+pico_enable_stdio_uart(flute 0)
 
 # Generate map/bin/hex files
 pico_add_extra_outputs(flute)

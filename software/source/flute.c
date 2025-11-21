@@ -1,9 +1,8 @@
 #include "functions.h"
 
-uint16_t volume_buffer[BUFFER_SIZE] = {0};
-
-
 int main(void) {
+	stdio_init_all();
+
     const uint16_t buttons[BUTTON_COUNT] = {BUTTON1, BUTTON2, BUTTON3, BUTTON4, BUTTON5, BUTTON6, BUTTON7, BUTTON8};
 
     for (register uint8_t i = 0; i < BUTTON_COUNT; ++i) {
@@ -26,6 +25,8 @@ int main(void) {
 				button_mask |= (1 << i);
 			}
         }
+		initGetVolume();
+
 		note_playing = get_frequency(button_mask);
 		generate_square_wave(note_playing, get_volume());	
     }

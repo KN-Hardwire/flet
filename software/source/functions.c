@@ -1,6 +1,12 @@
 #include "functions.h"
 
-extern uint16_t volume_buffer[BUFFER_SIZE];
+int lastMeasuredVolume;
+uint64_t  lastMeasuredTime;
+
+void initGetVolume(){
+  lastMeasuredVolume = adc_read()*1000;
+  lastMeasuredTime =  time_us_64();
+}
 
 void generate_square_wave(const float freq, const uint16_t volume) {
     const uint8_t slice_num = pwm_gpio_to_slice_num(OUT_PIN);
@@ -30,22 +36,37 @@ float get_frequency(const uint8_t mask) {
 	}
 }
 
-uint16_t get_volume(void) {
-	uint16_t adc_value = adc_read();
+int16_t diffVolume(){
+	lastMeasuredVolume = adc_read()*100;
+	lastMeasuredTime = time_us_64();
+	int16_t newVolume = 0;
+	uint64_t newTime = 0;
 
-	/* READING VOLUME FROM ADC VALUE NEEDS TESTING */
-	for (register uint8_t i = BUFFER_SIZE - 1; i > 0; --i) {
-		volume_buffer[i] = volume_buffer[i - 1];
-	}
-	volume_buffer[0] = adc_value;
-	uint32_t sum = 0;
-	for (register uint8_t i = 0; i < BUFFER_SIZE; ++i) {
-		sum += volume_buffer[i] * volume_buffer[i];
-	}
-	float volume = sqrt(1.0f / BUFFER_SIZE * sum);
-	/* READING VOLUME FROM ADC VALUE NEEDS TESTING */
+	uint16_t count = 0;
 
-	return (uint16_t)(volume / MAX_VOLUME * (float)DUTY / 2);
+	for (int i = 0; i < 50; i++) {
+		newVolume = adc_read()*100;
+		newTime = time_us_64();
+
+		int16_t diff = (newVolume-lastMeasuredVolume)/(newTime-lastMeasuredTime);
+		//printf("diff[%d]:%d\n", i, diff);
+		if (abs(diff) > 100) {
+			count++;
+		}
+
+		lastMeasuredVolume = newVolume;
+		lastMeasuredTime = newTime;
+	}
+	
+	printf("count:%d\n", count);
+	return (int16_t)((float)count/50) * MAX_VOLUME * ((float)DUTY / 2);
+}
+
+int get_volume(void) {
+	int16_t volume = diffVolume();
+
+	//printf("volume:%d\n", volume);
+	return (int)volume;
 }
 
 float nonstandard_mask(const uint8_t mask) {
