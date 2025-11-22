@@ -1,13 +1,5 @@
 #include "functions.h"
 
-int lastMeasuredVolume;
-uint64_t  lastMeasuredTime;
-
-void initGetVolume(){
-  lastMeasuredVolume = adc_read()*1000;
-  lastMeasuredTime =  time_us_64();
-}
-
 void generate_square_wave(const float freq, const uint16_t volume) {
     const uint8_t slice_num = pwm_gpio_to_slice_num(OUT_PIN);
 	float clk_div = (PWM_CLOCK_FREQ / (DUTY + 1)) / freq;
@@ -37,18 +29,25 @@ float get_frequency(const uint8_t mask) {
 }
 
 int16_t diffVolume(){
-	lastMeasuredVolume = adc_read()*100;
-	lastMeasuredTime = time_us_64();
+	static int lastMeasuredVolume = 0;
+	static uint64_t lastMeasuredTime = 0;
 	int16_t newVolume = 0;
 	uint64_t newTime = 0;
 
 	uint16_t count = 0;
 
+	lastMeasuredVolume = adc_read()*100;
+	lastMeasuredTime = time_us_64();
 	for (int i = 0; i < 50; i++) {
 		newVolume = adc_read()*100;
 		newTime = time_us_64();
 
-		int16_t diff = (newVolume-lastMeasuredVolume)/(newTime-lastMeasuredTime);
+		if (newTime - lastMeasuredTime != 0) {
+			int16_t diff = (newVolume-lastMeasuredVolume)/(newTime-lastMeasuredTime);
+		} else {
+			diff = 0;
+		}
+
 		//printf("diff[%d]:%d\n", i, diff);
 		if (abs(diff) > 100) {
 			count++;

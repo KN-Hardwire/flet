@@ -25,7 +25,6 @@ int main(void) {
 				button_mask |= (1 << i);
 			}
         }
-		initGetVolume();
 
 		note_playing = get_frequency(button_mask);
 		generate_square_wave(note_playing, get_volume());	
