@@ -4,10 +4,12 @@ void generate_square_wave(const float freq, const uint16_t volume) {
     const uint8_t slice_num = pwm_gpio_to_slice_num(OUT_PIN);
 	float clk_div = (PWM_CLOCK_FREQ / (DUTY + 1)) / freq;
     if (clk_div < 1.0f) clk_div = 1.0f; // lower bound
-    
+	
+	//printf("volume: %d\n", volume);
+
     pwm_set_clkdiv(slice_num, clk_div);
     pwm_set_wrap(slice_num, DUTY);
-    pwm_set_chan_level(slice_num, pwm_gpio_to_channel(OUT_PIN), volume);
+    pwm_set_chan_level(slice_num, pwm_gpio_to_channel(OUT_PIN), ((float)volume / MAX_VOLUME) / (DUTY / 2));
     pwm_set_enabled(slice_num, true);
 
     return;
@@ -28,44 +30,43 @@ float get_frequency(const uint8_t mask) {
 	}
 }
 
-int16_t diffVolume(){
-	static int lastMeasuredVolume = 0;
-	static uint64_t lastMeasuredTime = 0;
-	int16_t newVolume = 0;
-	uint64_t newTime = 0;
+uint16_t get_volume(void) {
+	static uint16_t diff_buffer[DIFF_BUFFER_SIZE] = {0};
+	static uint16_t buffer_index = 0;
+	static uint16_t diff_count = 0;			// How many pass threshold
 
-	uint16_t count = 0;
+	static uint16_t last_adc_measure = 0;
+	static uint64_t last_time_measure = 0;
+	uint16_t new_adc_measure = adc_read() * ADC_PREAMP;
+	uint64_t new_time_measure = time_us_64();
 
-	lastMeasuredVolume = adc_read()*100;
-	lastMeasuredTime = time_us_64();
-	for (int i = 0; i < 50; i++) {
-		newVolume = adc_read()*100;
-		newTime = time_us_64();
-
-		if (newTime - lastMeasuredTime != 0) {
-			int16_t diff = (newVolume-lastMeasuredVolume)/(newTime-lastMeasuredTime);
-		} else {
-			diff = 0;
-		}
-
-		//printf("diff[%d]:%d\n", i, diff);
-		if (abs(diff) > 100) {
-			count++;
-		}
-
-		lastMeasuredVolume = newVolume;
-		lastMeasuredTime = newTime;
+	uint16_t new_diff = abs(new_adc_measure - last_adc_measure) / (new_time_measure - last_time_measure);
+	diff_buffer[buffer_index] = new_diff;
+	buffer_index = (buffer_index + 1) % DIFF_BUFFER_SIZE;
+	//printf("diff: %d\n", new_diff);
+	if (new_diff > DIFF_THRESHOLD) {
+		diff_count++;
 	}
-	
-	printf("count:%d\n", count);
-	return (int16_t)((float)count/50) * MAX_VOLUME * ((float)DUTY / 2);
-}
+	if (diff_buffer[buffer_index] > DIFF_THRESHOLD) {
+		diff_count--;
+	}
+	//printf("diff count: %d\n", diff_count);
 
-int get_volume(void) {
-	int16_t volume = diffVolume();
+	last_adc_measure = new_adc_measure;
+	last_time_measure = new_time_measure;
 
-	//printf("volume:%d\n", volume);
-	return (int)volume;
+	/* Volume from diff count:
+	 * 0 <= diff_count <= DIFF_COUNT_THRESHOLD				--> Background noise
+	 * DIFF_COUNT_THRESHOLD < diff_count <= DIFF_COUNT_MAX	--> Volume control full spectrum
+	 * DIFF_COUNT_MAX < diff_count <= DIFF_BUFFER_SIZE		--> Round to max volume
+	 */
+	if (diff_count <= DIFF_COUNT_THRESHOLD) {
+		return 0;
+	}
+	if (diff_count <= DIFF_COUNT_MAX) {
+		return (diff_count - DIFF_COUNT_THRESHOLD);
+	}
+	return MAX_VOLUME;
 }
 
 float nonstandard_mask(const uint8_t mask) {
