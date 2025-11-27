@@ -16,6 +16,7 @@
 #include <math.h>
 
 void generate_square_wave(const float freq, const uint16_t volume);
+float volume_to_duty(uint16_t volume);
 float get_frequency(const uint8_t mask);
 uint16_t get_volume(void);
 float nonstandard_mask(const uint8_t mask);

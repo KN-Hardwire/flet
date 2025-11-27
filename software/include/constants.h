@@ -6,14 +6,15 @@
 #define DUTY				((uint32_t) 65535)
 #define PWM_CLOCK_FREQ		((float)	125000000.0)
 
-#define ADC_PREAMP			((uint16_t) 100)
-#define DIFF_BUFFER_SIZE	((uint16_t)	100)
-#define DIFF_THRESHOLD		((uint16_t) 100)
+#define ADC_PREAMP			((uint16_t) 100)	// <-- tuning
+#define DIFF_BUFFER_SIZE	((uint16_t)	100)	// <-- tuning
+#define DIFF_THRESHOLD		((uint16_t) 100)	// <-- tuning
 
-#define DIFF_COUNT_THRESHOLD	((uint16_t) 40)
-#define DIFF_COUNT_MAX			((uint16_t) 90)
+#define DIFF_COUNT_THRESHOLD	((uint16_t) 40) // <-- tuning
+#define DIFF_COUNT_MAX			((uint16_t) 90) // <-- tuning
+#define MAX_VOLUME			((uint16_t) 50)		// <-- tuning
 
-#define MAX_VOLUME			((uint16_t) 50)
+#define CALC_DUTY_POW		((float)2.2)		// <-- tuning
 
 #endif
 

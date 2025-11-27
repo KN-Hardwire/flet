@@ -6,29 +6,24 @@ void generate_square_wave(const float freq, const uint16_t volume) {
     if (clk_div < 1.0f) clk_div = 1.0f; // lower bound
 	
 	//printf("volume: %d\n", volume);
-
+	float out_duty = volume_to_duty(volume) * (DUTY / 2);
     pwm_set_clkdiv(slice_num, clk_div);
     pwm_set_wrap(slice_num, DUTY);
-    pwm_set_chan_level(slice_num, pwm_gpio_to_channel(OUT_PIN), ((float)volume / MAX_VOLUME) / (DUTY / 2));
+    pwm_set_chan_level(slice_num,
+			pwm_gpio_to_channel(OUT_PIN),
+			out_duty);
     pwm_set_enabled(slice_num, true);
 
     return;
 }
 
-float get_frequency(const uint8_t mask) {
-	switch (mask) {
-        case 0b11111111: return NOTE_C4;
-        case 0b11111110: return NOTE_D4;
-        case 0b11111100: return NOTE_E4;
-        case 0b11111000: return NOTE_F4;
-        case 0b11110000: return NOTE_G4;
-        case 0b11100000: return NOTE_A4;
-        case 0b11000000: return NOTE_B4;
-        case 0b10000000: return NOTE_C5;
-        case 0b00000000: return NOTE_D5;
-		default: return nonstandard_mask(mask);
-	}
+float volume_to_duty(uint16_t volume) {
+	if (volume == 0) return 0.0f;
+	float x = (float)volume / (float)MAX_VOLUME;
+	return powf(x, CALC_DUTY_POW);
 }
+
+
 
 uint16_t get_volume(void) {
 	static uint16_t diff_buffer[DIFF_BUFFER_SIZE] = {0};
@@ -67,6 +62,21 @@ uint16_t get_volume(void) {
 		return (diff_count - DIFF_COUNT_THRESHOLD);
 	}
 	return MAX_VOLUME;
+}
+
+float get_frequency(const uint8_t mask) {
+	switch (mask) {
+        case 0b11111111: return NOTE_C4;
+        case 0b11111110: return NOTE_D4;
+        case 0b11111100: return NOTE_E4;
+        case 0b11111000: return NOTE_F4;
+        case 0b11110000: return NOTE_G4;
+        case 0b11100000: return NOTE_A4;
+        case 0b11000000: return NOTE_B4;
+        case 0b10000000: return NOTE_C5;
+        case 0b00000000: return NOTE_D5;
+		default: return nonstandard_mask(mask);
+	}
 }
 
 float nonstandard_mask(const uint8_t mask) {
