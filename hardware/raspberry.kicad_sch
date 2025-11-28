@@ -2800,13 +2800,23 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 104.14) (xy 191.77 104.14)
+			(xy 176.53 93.98) (xy 189.23 93.98)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "02c7d3de-6d0b-4ff2-bbbd-4a8e97b1c76c")
+		(uuid "00496f3d-14f4-4f21-ac4e-6fdd213ecea5")
+	)
+	(wire
+		(pts
+			(xy 176.53 109.22) (xy 189.23 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "034e47da-7ec8-4c35-af7a-8188118c05fb")
 	)
 	(wire
 		(pts
@@ -2817,16 +2827,6 @@
 			(type default)
 		)
 		(uuid "05998543-f144-4b6a-809b-71a88bb320d4")
-	)
-	(wire
-		(pts
-			(xy 176.53 129.54) (xy 191.77 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "09114f73-7d56-44a9-931f-bca132b59133")
 	)
 	(wire
 		(pts
@@ -2890,13 +2890,13 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 60.96) (xy 191.77 60.96)
+			(xy 176.53 129.54) (xy 189.23 129.54)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "19ff50e1-c389-48e7-bca5-d271cfdcb2d0")
+		(uuid "18404885-e686-4304-ab69-1610681c4ce9")
 	)
 	(wire
 		(pts
@@ -2930,6 +2930,16 @@
 	)
 	(wire
 		(pts
+			(xy 176.53 60.96) (xy 189.23 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "214f8383-193c-4ee6-a376-b58495cd6fad")
+	)
+	(wire
+		(pts
 			(xy 127 177.8) (xy 127 175.26)
 		)
 		(stroke
@@ -2957,16 +2967,6 @@
 			(type default)
 		)
 		(uuid "2b2815fc-b70c-48c3-aeb5-6992bb9341a2")
-	)
-	(wire
-		(pts
-			(xy 176.53 71.12) (xy 191.77 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2d384e78-e74d-4f95-9eca-8aad8c8fbd5f")
 	)
 	(wire
 		(pts
@@ -3007,26 +3007,6 @@
 			(type default)
 		)
 		(uuid "33eee9c8-85db-45be-9ae4-f64595d45fb8")
-	)
-	(wire
-		(pts
-			(xy 176.53 99.06) (xy 191.77 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3471560d-216f-4ce0-bd79-19e1c0b3ea76")
-	)
-	(wire
-		(pts
-			(xy 176.53 63.5) (xy 191.77 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "34ed7c99-9d4b-4340-8a5d-ba15b768f0dc")
 	)
 	(wire
 		(pts
@@ -3170,16 +3150,6 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 116.84) (xy 191.77 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63fd2c2e-d40d-4722-b78e-bb7ea9c0745b")
-	)
-	(wire
-		(pts
 			(xy 156.21 45.72) (xy 156.21 35.56)
 		)
 		(stroke
@@ -3310,6 +3280,26 @@
 	)
 	(wire
 		(pts
+			(xy 176.53 116.84) (xy 189.23 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77de08b6-4f3a-4944-a931-3221884a6976")
+	)
+	(wire
+		(pts
+			(xy 176.53 104.14) (xy 189.23 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79084ef7-9ea4-4ed6-b2f7-7d2f6add7299")
+	)
+	(wire
+		(pts
 			(xy 63.5 123.19) (xy 63.5 120.65)
 		)
 		(stroke
@@ -3357,6 +3347,16 @@
 			(type default)
 		)
 		(uuid "7f71c93b-498b-401d-a31a-572e1e75bd5f")
+	)
+	(wire
+		(pts
+			(xy 176.53 114.3) (xy 189.23 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7fe32077-7c3f-4892-98a4-529a17717bcb")
 	)
 	(wire
 		(pts
@@ -3440,13 +3440,13 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 93.98) (xy 191.77 93.98)
+			(xy 176.53 63.5) (xy 189.23 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "94452630-3b23-4ecf-8935-86b992967e04")
+		(uuid "94e8eabd-1bd2-45d2-85ce-caab08a8b3a8")
 	)
 	(wire
 		(pts
@@ -3467,6 +3467,16 @@
 			(type default)
 		)
 		(uuid "9780e344-195c-4ba0-b400-27482b83813d")
+	)
+	(wire
+		(pts
+			(xy 176.53 99.06) (xy 189.23 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "982fc7b8-4f1d-4c8a-a11f-cf7e08433545")
 	)
 	(wire
 		(pts
@@ -3630,13 +3640,13 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 109.22) (xy 191.77 109.22)
+			(xy 176.53 71.12) (xy 189.23 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "bdea3d17-b1fb-4cdc-8eca-5aabb1d842cb")
+		(uuid "be94f554-68c0-4507-abab-33f313fdfe79")
 	)
 	(wire
 		(pts
@@ -3717,16 +3727,6 @@
 			(type default)
 		)
 		(uuid "d31f50eb-46f3-47f6-a4a6-7439e9296e9a")
-	)
-	(wire
-		(pts
-			(xy 176.53 114.3) (xy 191.77 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d54cd4d5-feb7-41e3-9e95-7ff0e8483e71")
 	)
 	(wire
 		(pts
@@ -4199,6 +4199,17 @@
 		)
 		(uuid "05661264-d678-4ae1-afd5-3ce546c79938")
 	)
+	(hierarchical_label "GPIO25"
+		(shape input)
+		(at 189.23 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "06e3bc0b-d6eb-435e-982b-3a0fc781ff83")
+	)
 	(hierarchical_label "GPIO1"
 		(shape input)
 		(at 189.23 55.88 0)
@@ -4210,6 +4221,28 @@
 		)
 		(uuid "0ec6e479-b963-45e6-9fe3-1abbdf9efe20")
 	)
+	(hierarchical_label "GPIO18"
+		(shape input)
+		(at 189.23 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "14ce6590-95a9-48f8-a46f-e8cedffe4eb9")
+	)
+	(hierarchical_label "GPIO3"
+		(shape input)
+		(at 189.23 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2746ba84-8c50-4a59-9abf-3ea075b9cde6")
+	)
 	(hierarchical_label "GPIO6"
 		(shape input)
 		(at 189.23 68.58 0)
@@ -4220,6 +4253,17 @@
 			(justify left)
 		)
 		(uuid "284f4e20-aa93-4298-b5b6-342e22b1bb3d")
+	)
+	(hierarchical_label "GPIO4"
+		(shape input)
+		(at 189.23 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "469fa76b-9d9e-4331-8289-e547e1231354")
 	)
 	(hierarchical_label "GPIO15"
 		(shape input)
@@ -4287,6 +4331,39 @@
 		)
 		(uuid "aeba6b23-7e9e-416b-a410-018b2ec48c8e")
 	)
+	(hierarchical_label "GPIO20"
+		(shape input)
+		(at 189.23 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b17f1d2d-7829-42b3-8954-d92fdc90eb99")
+	)
+	(hierarchical_label "GPIO16"
+		(shape input)
+		(at 189.23 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b7ed01bf-50ae-43cb-ac93-f05541219a66")
+	)
+	(hierarchical_label "GPIO29"
+		(shape input)
+		(at 189.23 129.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b8746df6-bcd2-43de-aeac-f0d101561cbd")
+	)
 	(hierarchical_label "GPIO11"
 		(shape input)
 		(at 189.23 81.28 0)
@@ -4297,6 +4374,28 @@
 			(justify left)
 		)
 		(uuid "cd99d955-382e-4697-a0b3-897732cc3dc6")
+	)
+	(hierarchical_label "GPIO7"
+		(shape input)
+		(at 189.23 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ce1eba3f-816e-4f78-8b0b-7756f3f284c7")
+	)
+	(hierarchical_label "GPIO24"
+		(shape input)
+		(at 189.23 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dfdef035-b6d5-4051-b670-6365faf3ec45")
 	)
 	(hierarchical_label "GPIO13"
 		(shape input)
@@ -4309,137 +4408,16 @@
 		)
 		(uuid "f654b10c-49fe-412d-b5de-e28b34a17300")
 	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 191.77 60.96 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "054a7755-20f3-4cef-8a31-7cfa32b72479")
-		(property "Reference" "TP3"
-			(at 197.104 60.9599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
+	(hierarchical_label "GPIO22"
+		(shape input)
+		(at 189.23 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left)
 		)
-		(property "Value" "TestPoint"
-			(at 201.168 60.96 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 191.77 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 191.77 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "418bc9ec-f140-412e-a7ae-591aed6109c6")
-		)
-		(instances
-			(project "flute"
-				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 191.77 63.5 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0750e301-623f-40be-b4cc-a636c17eeef5")
-		(property "Reference" "TP5"
-			(at 197.104 63.4999 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 201.422 63.5 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 191.77 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 191.77 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "36644117-4dbe-47ea-a080-6f2a97b9a07a")
-		)
-		(instances
-			(project "flute"
-				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP5")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "f90cb902-4db9-4cfb-a6fc-cc43d3e11a10")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -4505,72 +4483,6 @@
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
 					(reference "C5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 191.77 129.54 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0ad8ed8d-9f5d-47d7-a055-666248254939")
-		(property "Reference" "TP21"
-			(at 196.85 129.54 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 200.406 129.54 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 191.77 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 191.77 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8006ea6a-e18f-41e7-96c4-2d9b27604c48")
-		)
-		(instances
-			(project "flute"
-				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP21")
 					(unit 1)
 				)
 			)
@@ -5113,72 +5025,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 191.77 99.06 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "25be969b-f4a2-46fd-a5fa-f8a2ef3648cf")
-		(property "Reference" "TP11"
-			(at 197.104 99.06 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 201.168 99.06 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 191.77 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 191.77 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "eae379b7-92cc-488f-9f92-56433c66b39c")
-		)
-		(instances
-			(project "flute"
-				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 149.86 181.61 0)
 		(unit 1)
@@ -5242,72 +5088,6 @@
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
 					(reference "C15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 191.77 114.3 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2be26ab8-52ae-4993-a064-75a6062580a0")
-		(property "Reference" "TP17"
-			(at 196.85 114.3 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 200.406 114.3 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 191.77 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 191.77 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "deae3203-d2d8-465e-baae-29e0baf3bb0d")
-		)
-		(instances
-			(project "flute"
-				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP17")
 					(unit 1)
 				)
 			)
@@ -5990,72 +5770,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 191.77 93.98 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "491e8d9f-0573-43d7-963c-9218641821aa")
-		(property "Reference" "TP9"
-			(at 196.85 93.9799 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 200.914 93.98 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 191.77 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 191.77 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ad9a8c7c-9bfe-48ad-920b-a9ba4a27c760")
-		)
-		(instances
-			(project "flute"
-				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 161.29 189.23 0)
 		(unit 1)
@@ -6723,72 +6437,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 191.77 104.14 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "744c2948-2ae5-4137-a92b-9ed8cf27289a")
-		(property "Reference" "TP13"
-			(at 196.85 104.14 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 200.406 104.14 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 191.77 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 191.77 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f2625f93-f1ce-4f67-ab96-8a23a77eb1d7")
-		)
-		(instances
-			(project "flute"
-				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 246.38 110.49 0)
 		(unit 1)
@@ -6981,72 +6629,6 @@
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
 					(reference "#PWR024")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 191.77 116.84 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7b2f1929-c5ff-4c04-958f-7f92aa2677a2")
-		(property "Reference" "TP18"
-			(at 196.85 116.84 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 200.406 116.84 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 191.77 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 191.77 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3acdef1c-7467-4782-a2c7-60bc622b1fdb")
-		)
-		(instances
-			(project "flute"
-				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP18")
 					(unit 1)
 				)
 			)
@@ -7587,72 +7169,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 191.77 71.12 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "af1d5ad3-c91b-4b46-9673-d819c2918764")
-		(property "Reference" "TP7"
-			(at 197.104 71.1199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 201.168 71.12 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 191.77 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 191.77 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "023678da-d0e5-494c-b1a6-24b033ed3fbf")
-		)
-		(instances
-			(project "flute"
-				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:Crystal_GND24")
 		(at 52.07 123.19 0)
 		(unit 1)
@@ -8118,72 +7634,6 @@
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
 					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 191.77 109.22 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d95eccfb-fab4-44be-92bf-d1068ca1a0be")
-		(property "Reference" "TP15"
-			(at 196.85 109.22 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 200.406 109.22 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 191.77 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 191.77 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f1558aca-83c3-4df4-a5d9-936cf0fb1e15")
-		)
-		(instances
-			(project "flute"
-				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP15")
 					(unit 1)
 				)
 			)

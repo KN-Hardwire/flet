@@ -16,6 +16,113 @@
 		(comment 5 "Authors:")
 	)
 	(lib_symbols
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector_Audio:AudioJack2"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1336,6 +1443,12 @@
 		(uuid "2a099081-2bf1-40b8-a4cc-d83edf36325d")
 	)
 	(junction
+		(at 154.94 168.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3d1b4c35-307d-4191-99bb-38230d1795a8")
+	)
+	(junction
 		(at 62.23 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1360,16 +1473,16 @@
 		(uuid "9eda21fe-609a-4a22-ab03-aa69bfdd1876")
 	)
 	(junction
-		(at 147.32 168.91)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c33aa14f-fdcc-4d59-9338-9f8864b95205")
-	)
-	(junction
 		(at 62.23 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c41ae8ec-73a8-400c-bafd-86630c43fa06")
+	)
+	(junction
+		(at 147.32 168.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d3d22a45-0b33-41be-b4e0-6a120cb0fb97")
 	)
 	(no_connect
 		(at 261.62 63.5)
@@ -1471,6 +1584,16 @@
 	)
 	(wire
 		(pts
+			(xy 147.32 168.91) (xy 154.94 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "051b8011-1e54-4ae8-b10e-7bf7e6b3c2f2")
+	)
+	(wire
+		(pts
 			(xy 62.23 82.55) (xy 62.23 85.09)
 		)
 		(stroke
@@ -1518,6 +1641,16 @@
 			(type default)
 		)
 		(uuid "232d0a6d-4ac1-4b35-8a17-b3f37e938fbf")
+	)
+	(wire
+		(pts
+			(xy 154.94 168.91) (xy 168.91 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24876c38-ddb6-47ef-af9a-a28b922e786d")
 	)
 	(wire
 		(pts
@@ -1598,16 +1731,6 @@
 			(type default)
 		)
 		(uuid "508abb32-3aa5-499d-8b37-af62286947eb")
-	)
-	(wire
-		(pts
-			(xy 147.32 168.91) (xy 168.91 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5f529eff-0c93-4956-a462-60393c7ede4a")
 	)
 	(wire
 		(pts
@@ -2286,6 +2409,71 @@
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
 					(reference "MIC.CASE1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 154.94 168.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5430c857-4321-401a-9331-787edd28e681")
+		(property "Reference" "TP?"
+			(at 151.638 163.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 151.638 166.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Bridge_Pitch2.54mm_Drill1.3mm"
+			(at 154.94 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 154.94 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 154.94 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9d45078c-bd95-488f-b779-cfc88086b09e")
+		)
+		(instances
+			(project ""
+				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
+					(reference "TP?")
 					(unit 1)
 				)
 			)
