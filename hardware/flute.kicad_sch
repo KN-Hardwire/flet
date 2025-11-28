@@ -2424,7 +2424,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5430c857-4321-401a-9331-787edd28e681")
-		(property "Reference" "TP?"
+		(property "Reference" "TP1"
 			(at 151.638 163.83 90)
 			(effects
 				(font
@@ -2473,7 +2473,7 @@
 		(instances
 			(project ""
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
-					(reference "TP?")
+					(reference "TP1")
 					(unit 1)
 				)
 			)

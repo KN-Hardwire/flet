@@ -4563,7 +4563,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0f2dddef-4f1d-4b6d-aa6e-434bf5b55a2e")
-		(property "Reference" "TP8"
+		(property "Reference" "TP6"
 			(at 197.104 73.66 90)
 			(effects
 				(font
@@ -4614,7 +4614,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP8")
+					(reference "TP6")
 					(unit 1)
 				)
 			)
@@ -5712,7 +5712,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "490f911a-72b8-4358-bc3b-e33d038c8bf6")
-		(property "Reference" "TP12"
+		(property "Reference" "TP8"
 			(at 196.85 101.6 90)
 			(effects
 				(font
@@ -5763,7 +5763,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP12")
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -6511,7 +6511,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "784a6464-cb3b-4865-8cc5-a27785bd0bf3")
-		(property "Reference" "TP14"
+		(property "Reference" "TP9"
 			(at 196.85 106.68 90)
 			(effects
 				(font
@@ -6562,7 +6562,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP14")
+					(reference "TP9")
 					(unit 1)
 				)
 			)
@@ -6911,7 +6911,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a4919ff1-ea36-4105-a071-cb0d0dfdb171")
-		(property "Reference" "TP20"
+		(property "Reference" "TP12"
 			(at 196.85 127 90)
 			(effects
 				(font
@@ -6962,7 +6962,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP20")
+					(reference "TP12")
 					(unit 1)
 				)
 			)
@@ -7045,7 +7045,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ab118b5f-eb44-4f81-924a-5845490a70f5")
-		(property "Reference" "TP2"
+		(property "Reference" "TP3"
 			(at 100.33 60.96 90)
 			(effects
 				(font
@@ -7096,7 +7096,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP2")
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -7111,7 +7111,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ace0e25c-044c-4313-bda5-42902b8229c3")
-		(property "Reference" "TP10"
+		(property "Reference" "TP7"
 			(at 196.85 96.774 90)
 			(effects
 				(font
@@ -7162,7 +7162,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP10")
+					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -7250,7 +7250,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b3f42fe2-592f-4cfb-9095-318ec60be9d9")
-		(property "Reference" "TP1"
+		(property "Reference" "TP2"
 			(at 196.85 52.0699 90)
 			(effects
 				(font
@@ -7301,7 +7301,7 @@
 		(instances
 			(project ""
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP1")
+					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -7448,7 +7448,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c68c04a2-24f2-4335-99d5-f8e5b59214a5")
-		(property "Reference" "TP16"
+		(property "Reference" "TP10"
 			(at 196.85 111.76 90)
 			(effects
 				(font
@@ -7499,7 +7499,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP16")
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -7718,7 +7718,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e256cbee-b3b4-4337-88e1-9e5795174d32")
-		(property "Reference" "TP6"
+		(property "Reference" "TP5"
 			(at 197.104 66.04 90)
 			(effects
 				(font
@@ -7769,7 +7769,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP6")
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -7982,7 +7982,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f48bbaeb-b966-4532-bc2f-de366fb33c97")
-		(property "Reference" "TP19"
+		(property "Reference" "TP11"
 			(at 196.85 124.46 90)
 			(effects
 				(font
@@ -8033,7 +8033,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34/739c4558-e5ce-473d-85db-8208f7847074"
-					(reference "TP19")
+					(reference "TP11")
 					(unit 1)
 				)
 			)
