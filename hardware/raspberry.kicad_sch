@@ -3890,7 +3890,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 53.34) (xy 191.77 53.34)
+			(xy 176.53 53.34) (xy 193.04 53.34)
 		)
 		(stroke
 			(width 0)
@@ -7243,7 +7243,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 191.77 53.34 270)
+		(at 193.04 53.34 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7251,7 +7251,7 @@
 		(dnp no)
 		(uuid "b3f42fe2-592f-4cfb-9095-318ec60be9d9")
 		(property "Reference" "TP2"
-			(at 196.85 52.0699 90)
+			(at 198.12 52.0699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7260,7 +7260,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 196.85 54.6099 90)
+			(at 198.12 54.6099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7269,7 +7269,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 191.77 58.42 0)
+			(at 193.04 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7278,7 +7278,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 191.77 58.42 0)
+			(at 193.04 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7287,7 +7287,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 191.77 53.34 0)
+			(at 193.04 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)

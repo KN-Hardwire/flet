@@ -2950,7 +2950,7 @@
 			(layer "F.CrtYd")
 			(uuid "e296f4a1-c25d-4459-b408-91bfb5918e16")
 		)
-		(pad "2" smd circle
+		(pad "1" smd circle
 			(at 0 0)
 			(size 1.5 1.5)
 			(layers "F.Cu" "F.Mask")
@@ -4253,7 +4253,7 @@
 		(descr "QFN, 56 Pin (https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf#page=634), generated with kicad-footprint-generator ipc_noLead_generator.py")
 		(tags "QFN NoLead")
 		(property "Reference" "U1"
-			(at 5.045926 3.545745 0)
+			(at -5.096074 3.730745 0)
 			(layer "F.SilkS")
 			(uuid "b3cf326d-6b59-4b98-a505-669176ae30fd")
 			(effects
@@ -10066,6 +10066,14 @@
 		(uuid "1bd1dfef-e7ad-4648-8a88-1a1d83781b9d")
 	)
 	(segment
+		(start 44.333681 109.95)
+		(end 44.404926 110.021245)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "268f53e6-7137-4d15-b310-0c23e4850b65")
+	)
+	(segment
 		(start 47.686926 102.261245)
 		(end 47.677926 102.270245)
 		(width 0.2)
@@ -10169,6 +10177,15 @@
 		(free yes)
 		(net 1)
 		(uuid "15360477-f88b-46b5-9768-84ed835d181f")
+	)
+	(via
+		(at 47.117 105.537)
+		(size 1)
+		(drill 0.5)
+		(layers "F.Cu" "B.Cu")
+		(free yes)
+		(net 1)
+		(uuid "223c6a49-ce7e-4515-8dc7-2978d2b330cd")
 	)
 	(via
 		(at 53.127926 103.220245)
