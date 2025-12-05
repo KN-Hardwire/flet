@@ -26,8 +26,7 @@ int main(void) {
 			}
         }
 
-		note_playing = get_frequency(button_mask);
-		generate_square_wave(note_playing, get_volume());	
+		generate_square_wave( get_frequency(button_mask), get_volume() );	
     }
 
     return EXIT_SUCCESS;
