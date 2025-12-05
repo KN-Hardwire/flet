@@ -65,7 +65,7 @@ uint16_t get_volume(void) {
 }
 
 float get_frequency(const uint8_t mask) {
-	switch (mask) {
+	switch (standardize_mask(mask)) {
         case 0b11111111: return NOTE_C4;
         case 0b11111110: return NOTE_D4;
         case 0b11111100: return NOTE_E4;
@@ -75,11 +75,11 @@ float get_frequency(const uint8_t mask) {
         case 0b11000000: return NOTE_B4;
         case 0b10000000: return NOTE_C5;
         case 0b00000000: return NOTE_D5;
-		default: return nonstandard_mask(mask);
+		default: return 0.0f;
 	}
 }
 
-float nonstandard_mask(const uint8_t mask) {
+uint8_t standardize_mask(const uint8_t mask) {
 	uint8_t check_mask = 0b10000000;
 	for (register uint8_t i = 0; i < BUTTON_COUNT; ++i) {
 		if ((mask & check_mask) != check_mask) {
