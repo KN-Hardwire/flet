@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "ELECTRONIC FLUTE")
-		(date "2025-11-16")
-		(rev "1.0")
+		(date "2025-12-03")
+		(rev "1.1")
 		(company "KN HARDWIRE AGH")
 		(comment 1 "ZOFIA STACHOŃ")
 		(comment 2 "DAWID TOMALA")
@@ -751,6 +751,192 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Jumper:SolderJumper_2_Open"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "JP"
+				(at 0 2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SolderJumper_2_Open"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Solder Jumper, 2-pole, open"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "solder jumper SPST"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SolderJumper*Open*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SolderJumper_2_Open_0_1"
+				(polyline
+					(pts
+						(xy -0.254 1.016) (xy -0.254 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.016) (xy 0.254 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SolderJumper_2_Open_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Switch:SW_Omron_B3FS"
 			(pin_numbers
 				(hide yes)
@@ -1354,16 +1540,28 @@
 		(uuid "686982a3-863f-4ee5-ba1b-77cc67e5746d")
 	)
 	(junction
+		(at 147.32 176.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6ae4d6b6-7e69-4f0c-89a4-6c784d2a585a")
+	)
+	(junction
+		(at 168.91 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9a71c932-c5ea-48da-8552-2a45c9121877")
+	)
+	(junction
 		(at 62.23 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9eda21fe-609a-4a22-ab03-aa69bfdd1876")
 	)
 	(junction
-		(at 147.32 168.91)
+		(at 138.43 165.1)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "c33aa14f-fdcc-4d59-9338-9f8864b95205")
+		(uuid "b1a504c6-fd69-47bd-9268-aec2cd59cf95")
 	)
 	(junction
 		(at 62.23 57.15)
@@ -1461,7 +1659,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 144.78) (xy 168.91 168.91)
+			(xy 168.91 144.78) (xy 168.91 158.75)
 		)
 		(stroke
 			(width 0)
@@ -1481,7 +1679,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 165.1) (xy 138.43 168.91)
+			(xy 138.43 165.1) (xy 138.43 176.53)
 		)
 		(stroke
 			(width 0)
@@ -1498,6 +1696,16 @@
 			(type default)
 		)
 		(uuid "12767369-6af2-45d1-918d-a93328f01ffb")
+	)
+	(wire
+		(pts
+			(xy 147.32 158.75) (xy 143.51 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2014c86a-34a2-4257-9d59-fe438c5568d2")
 	)
 	(wire
 		(pts
@@ -1531,7 +1739,17 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 168.91) (xy 147.32 171.45)
+			(xy 154.94 158.75) (xy 168.91 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2595e7b5-c3d0-454c-8899-4e30855ee704")
+	)
+	(wire
+		(pts
+			(xy 147.32 176.53) (xy 147.32 179.07)
 		)
 		(stroke
 			(width 0)
@@ -1558,6 +1776,16 @@
 			(type default)
 		)
 		(uuid "37d2ce5d-5fee-45e0-ae78-0098585c1b98")
+	)
+	(wire
+		(pts
+			(xy 154.94 168.91) (xy 168.91 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38741102-6428-4e5f-b280-8fddd3d68931")
 	)
 	(wire
 		(pts
@@ -1601,17 +1829,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 168.91) (xy 168.91 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5f529eff-0c93-4956-a462-60393c7ede4a")
-	)
-	(wire
-		(pts
-			(xy 147.32 179.07) (xy 147.32 181.61)
+			(xy 147.32 186.69) (xy 147.32 189.23)
 		)
 		(stroke
 			(width 0)
@@ -1661,7 +1879,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 162.56) (xy 158.75 162.56)
+			(xy 137.16 162.56) (xy 139.7 162.56)
 		)
 		(stroke
 			(width 0)
@@ -1671,7 +1889,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 168.91) (xy 139.7 168.91)
+			(xy 138.43 176.53) (xy 139.7 176.53)
 		)
 		(stroke
 			(width 0)
@@ -1741,7 +1959,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 162.56) (xy 158.75 157.48)
+			(xy 139.7 162.56) (xy 139.7 157.48)
 		)
 		(stroke
 			(width 0)
@@ -1768,6 +1986,16 @@
 			(type default)
 		)
 		(uuid "b4fd75d4-c6ed-4119-8831-e5f5da9a2b08")
+	)
+	(wire
+		(pts
+			(xy 143.51 165.1) (xy 138.43 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb24ed0c-94ba-495d-9252-000022cb0edc")
 	)
 	(wire
 		(pts
@@ -1798,6 +2026,16 @@
 			(type default)
 		)
 		(uuid "c50c6be2-03a9-4ace-8790-12337cacf480")
+	)
+	(wire
+		(pts
+			(xy 147.32 176.53) (xy 147.32 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd9375fc-c498-414e-bca0-cdac9719f384")
 	)
 	(wire
 		(pts
@@ -1851,6 +2089,16 @@
 	)
 	(wire
 		(pts
+			(xy 168.91 158.75) (xy 168.91 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f25b52c2-db5e-4fbb-a5af-423613fd50b5")
+	)
+	(wire
+		(pts
 			(xy 87.63 76.2) (xy 203.2 76.2)
 		)
 		(stroke
@@ -1889,6 +2137,16 @@
 		)
 		(uuid "fd336354-91dd-465b-a505-959c1e622338")
 	)
+	(wire
+		(pts
+			(xy 143.51 158.75) (xy 143.51 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe07da92-9b9d-4723-bb5f-ec041f2226ed")
+	)
 	(label "KEY_H"
 		(at 114.3 76.2 0)
 		(effects
@@ -1900,7 +2158,7 @@
 		(uuid "0380ae4b-fdb0-44a9-abb9-fd1c623762db")
 	)
 	(label "PWM_OUT"
-		(at 158.75 168.91 180)
+		(at 166.37 168.91 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2147,6 +2405,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at 151.13 158.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "245db28a-9e34-498d-863c-9a9e1c7c8543")
+		(property "Reference" "JP2"
+			(at 151.13 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NO_COUPLING"
+			(at 151.13 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
+			(at 151.13 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 151.13 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 151.13 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "51d00d56-6831-40d3-8214-a9528a0fb58d")
+		)
+		(pin "2"
+			(uuid "230f5a5d-c345-455b-b86a-ddf32c70e801")
+		)
+		(instances
+			(project "flute"
+				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
+					(reference "JP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 62.23 128.27 0)
 		(unit 1)
@@ -2156,7 +2482,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "426e8fe3-7e99-4ab0-932f-4278105dcdc5")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR03"
 			(at 62.23 134.62 0)
 			(effects
 				(font
@@ -2206,7 +2532,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
-					(reference "#PWR06")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -2435,7 +2761,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "794b060a-c8ea-4555-b314-502765bbe950")
-		(property "Reference" "J2"
+		(property "Reference" "J1"
 			(at 132.08 156.21 0)
 			(effects
 				(font
@@ -2487,7 +2813,75 @@
 		(instances
 			(project ""
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
-					(reference "J2")
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at 151.13 168.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7d73bd02-10e0-4bad-a3a1-98da8caf40b7")
+		(property "Reference" "JP1"
+			(at 151.13 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "COUPLING"
+			(at 151.13 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
+			(at 151.13 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 151.13 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 151.13 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "38b29dc1-c21b-4b72-b5c6-3493514e012a")
+		)
+		(pin "2"
+			(uuid "f009475e-beb9-4ef6-aec0-f3b9e65117bd")
+		)
+		(instances
+			(project "flute"
+				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
+					(reference "JP1")
 					(unit 1)
 				)
 			)
@@ -2562,7 +2956,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 147.32 175.26 0)
+		(at 147.32 182.88 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2570,8 +2964,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "814ab398-84fa-467a-94bd-4b3d26037075")
-		(property "Reference" "R1"
-			(at 149.86 173.9899 0)
+		(property "Reference" "R2"
+			(at 149.86 181.6099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2580,7 +2974,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 149.86 176.5299 0)
+			(at 149.86 184.1499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2589,7 +2983,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 145.542 175.26 90)
+			(at 145.542 182.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2598,7 +2992,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 147.32 175.26 0)
+			(at 147.32 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2607,7 +3001,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 147.32 175.26 0)
+			(at 147.32 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2624,7 +3018,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
-					(reference "R1")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -2640,7 +3034,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "848035f1-1a1b-4cf6-a7ba-310a7071f799")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR01"
 			(at 62.23 91.44 0)
 			(effects
 				(font
@@ -2691,7 +3085,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
-					(reference "#PWR05")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -2707,7 +3101,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "858acf1b-a6a9-4f6f-b1e8-ab14bd59bd30")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR05"
 			(at 58.42 166.37 0)
 			(effects
 				(font
@@ -2757,7 +3151,7 @@
 		(instances
 			(project ""
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
-					(reference "#PWR01")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -2765,7 +3159,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 147.32 181.61 0)
+		(at 147.32 189.23 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2773,8 +3167,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "936d890f-fb87-4727-8e1c-ad3aa390429a")
-		(property "Reference" "#PWR03"
-			(at 147.32 187.96 0)
+		(property "Reference" "#PWR07"
+			(at 147.32 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2783,7 +3177,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 147.32 186.69 0)
+			(at 147.32 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2791,7 +3185,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 147.32 181.61 0)
+			(at 147.32 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2800,7 +3194,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.32 181.61 0)
+			(at 147.32 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2809,7 +3203,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 147.32 181.61 0)
+			(at 147.32 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2823,7 +3217,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
-					(reference "#PWR03")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -2902,11 +3296,11 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a2ae6dc8-f954-4970-a499-312fa14553cb")
-		(property "Reference" "J1"
+		(property "Reference" "J2"
 			(at 123.825 172.72 0)
 			(effects
 				(font
@@ -2967,7 +3361,7 @@
 		(instances
 			(project ""
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
-					(reference "J1")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -2983,7 +3377,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a33af47b-b5ef-465e-95bd-b724134341e6")
-		(property "Reference" "C2"
+		(property "Reference" "C1"
 			(at 101.6 107.95 90)
 			(effects
 				(font
@@ -3035,7 +3429,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
-					(reference "C2")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -3127,7 +3521,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b8b5bcc0-4815-4b1b-9e9e-45f372b60458")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR02"
 			(at 82.55 123.19 0)
 			(effects
 				(font
@@ -3177,7 +3571,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
-					(reference "#PWR07")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -3185,7 +3579,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 158.75 157.48 180)
+		(at 139.7 157.48 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3194,7 +3588,7 @@
 		(fields_autoplaced yes)
 		(uuid "c204216d-6f7a-4ce0-ae23-f44c6c3ccbc2")
 		(property "Reference" "#PWR04"
-			(at 158.75 151.13 0)
+			(at 139.7 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3203,7 +3597,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 158.75 152.4 0)
+			(at 139.7 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3211,7 +3605,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 158.75 157.48 0)
+			(at 139.7 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3220,7 +3614,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 157.48 0)
+			(at 139.7 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3229,7 +3623,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 158.75 157.48 0)
+			(at 139.7 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3259,7 +3653,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ce1ac31c-f830-4b3f-955d-d09fed0beabe")
-		(property "Reference" "R2"
+		(property "Reference" "R1"
 			(at 85.09 119.3799 0)
 			(effects
 				(font
@@ -3313,7 +3707,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
-					(reference "R2")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -3329,7 +3723,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d086bbeb-7d28-48ab-9a37-ad2bee3df6f0")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR06"
 			(at 58.42 185.42 0)
 			(effects
 				(font
@@ -3379,7 +3773,7 @@
 		(instances
 			(project ""
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
-					(reference "#PWR02")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -3533,15 +3927,15 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 143.51 168.91 90)
+		(at 143.51 176.53 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "edee63ae-c15b-490f-9e41-23a21ff1fdbf")
-		(property "Reference" "C1"
-			(at 143.51 172.72 90)
+		(property "Reference" "C2"
+			(at 143.51 180.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3549,7 +3943,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 143.51 175.26 90)
+			(at 143.51 182.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3557,7 +3951,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 147.32 167.9448 0)
+			(at 147.32 175.5648 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3566,7 +3960,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 143.51 168.91 0)
+			(at 143.51 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3575,7 +3969,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 143.51 168.91 0)
+			(at 143.51 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3592,7 +3986,7 @@
 		(instances
 			(project "flute"
 				(path "/9ae53f79-8ce2-4a44-ba8e-dca375125c34"
-					(reference "C1")
+					(reference "C2")
 					(unit 1)
 				)
 			)
