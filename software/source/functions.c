@@ -1,26 +1,33 @@
 #include "functions.h"
 
-void generate_square_wave(const float freq, const uint16_t volume) {
+void generate_square_wave(const project_type freq, const uint16_t volume) {
     const uint8_t slice_num = pwm_gpio_to_slice_num(OUT_PIN);
-	float clk_div = (PWM_CLOCK_FREQ / (DUTY + 1)) / freq;
-    if (clk_div < 1.0f) clk_div = 1.0f; // lower bound
+	project_type clk_div = (PWM_CLOCK_FREQ / (DUTY + 1)) / freq;
+
+	// Lower bound
+	#if PROJECT_TYPE == PROJECT_INT
+    	if (clk_div < 1) clk_div = 1; 
+	#elif PROJECT_TYPE == PROJECT_FLOAT
+    	if (clk_div < 1.0f) clk_div = 1.0f;
+	#endif
 	
-	//printf("volume: %d\n", volume);
-	float out_duty = volume_to_duty(volume) * (DUTY / 2);
+	#if DEBUG_MODE == 1
+		printf("volume: %d\n", volume);
+	#endif
+
+	project_type out_duty = volume_to_duty(volume) * (DUTY / 2);
     pwm_set_clkdiv(slice_num, clk_div);
     pwm_set_wrap(slice_num, DUTY);
-    pwm_set_chan_level(slice_num,
-			pwm_gpio_to_channel(OUT_PIN),
-			out_duty);
+    pwm_set_chan_level(slice_num, pwm_gpio_to_channel(OUT_PIN), out_duty);
     pwm_set_enabled(slice_num, true);
 
     return;
 }
 
-float volume_to_duty(uint16_t volume) {
-	if (volume == 0) return 0.0f;
-	float x = (float)volume / (float)MAX_VOLUME;
-	return powf(x, CALC_DUTY_POW);
+project_type volume_to_duty(uint16_t volume) {
+	if(!volume){ return 0; }
+	project_type x = ((project_type) volume) / ((project_type) MAX_VOLUME);
+    return (project_type) pow((double) x, (double) CALC_DUTY_POW);
 }
 
 
@@ -28,24 +35,34 @@ float volume_to_duty(uint16_t volume) {
 uint16_t get_volume(void) {
 	static uint16_t diff_buffer[DIFF_BUFFER_SIZE] = {0};
 	static uint16_t buffer_index = 0;
-	static uint16_t diff_count = 0;			// How many pass threshold
+
+	// How many pass threshold
+	static uint16_t diff_count = 0;
 
 	static uint16_t last_adc_measure = 0;
 	static uint64_t last_time_measure = 0;
+
 	uint16_t new_adc_measure = adc_read() * ADC_PREAMP;
 	uint64_t new_time_measure = time_us_64();
 
 	uint16_t new_diff = abs(new_adc_measure - last_adc_measure) / (new_time_measure - last_time_measure);
 	diff_buffer[buffer_index] = new_diff;
 	buffer_index = (buffer_index + 1) % DIFF_BUFFER_SIZE;
-	//printf("diff: %d\n", new_diff);
+
+	#if DEBUG_MODE == 1
+		printf("diff: %d\n", new_diff);
+	#endif
+
 	if (new_diff > DIFF_THRESHOLD) {
 		diff_count++;
 	}
 	if (diff_buffer[buffer_index] > DIFF_THRESHOLD) {
 		diff_count--;
 	}
-	//printf("diff count: %d\n", diff_count);
+
+	#if DEBUG_MODE == 1
+		printf("diff count: %d\n", diff_count);
+	#endif
 
 	last_adc_measure = new_adc_measure;
 	last_time_measure = new_time_measure;
@@ -55,16 +72,19 @@ uint16_t get_volume(void) {
 	 * DIFF_COUNT_THRESHOLD < diff_count <= DIFF_COUNT_MAX	--> Volume control full spectrum
 	 * DIFF_COUNT_MAX < diff_count <= DIFF_BUFFER_SIZE		--> Round to max volume
 	 */
+
 	if (diff_count <= DIFF_COUNT_THRESHOLD) {
 		return 0;
 	}
+
 	if (diff_count <= DIFF_COUNT_MAX) {
 		return (diff_count - DIFF_COUNT_THRESHOLD);
 	}
+
 	return MAX_VOLUME;
 }
 
-float get_frequency(const uint8_t mask) {
+project_type get_frequency(const uint8_t mask) {
 	switch (standardize_mask(mask)) {
         case 0b11111111: return NOTE_C4;
         case 0b11111110: return NOTE_D4;
@@ -75,7 +95,7 @@ float get_frequency(const uint8_t mask) {
         case 0b11000000: return NOTE_B4;
         case 0b10000000: return NOTE_C5;
         case 0b00000000: return NOTE_D5;
-		default: return 0.0f;
+		default: return 0;
 	}
 }
 
