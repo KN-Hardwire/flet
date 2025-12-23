@@ -6,7 +6,7 @@
 #define PROJECT_TYPE PROJECT_INT
 
 #if PROJECT_TYPE == PROJECT_INT
-    #define project_type     int
+    #define project_type     int32_t
 #elif PROJECT_TYPE == PROJECT_FLOAT
     #define project_type     float
 #endif
