@@ -17,7 +17,7 @@ void generate_square_wave(const project_type freq, const uint16_t volume) {
     return;
 }
 
-float volume_to_duty(uint16_t volume) {
+project_type volume_to_duty(uint16_t volume) {
 	if (volume == 0) return 0.0f;
 	float x = (float)volume / (float)MAX_VOLUME;
 	return powf(x, CALC_DUTY_POW);
@@ -64,7 +64,7 @@ uint16_t get_volume(void) {
 	return MAX_VOLUME;
 }
 
-float get_frequency(const uint8_t mask) {
+project_type get_frequency(const uint8_t mask) {
 	switch (standardize_mask(mask)) {
         case 0b11111111: return NOTE_C4;
         case 0b11111110: return NOTE_D4;
