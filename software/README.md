@@ -17,6 +17,12 @@ mkdir build
 cd build
 cmake ..
 ```
+*No debug and int32_t type on default*
+
+Available CMake flags:
+```
+-DDEBUG_MODE=<OFF/ON> -DPROJECT_TYPE=<INT/FLOAT>
+```
 
 If succesful, run the Makefile from build directory:
 ```

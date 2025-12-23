@@ -1,14 +1,19 @@
 #ifndef TYPES_H
 #define TYPES_H
 
-// Should be defined through CMAKE
-#define DEBUG_MODE 0
-#define PROJECT_TYPE PROJECT_INT
+#include <stdint.h>
+
+#ifndef DEBUG_MODE
+    #define DEBUG_MODE 0
+#endif
 
 #if PROJECT_TYPE == PROJECT_INT
-    #define project_type     int32_t
+	#define project_type int32_t
 #elif PROJECT_TYPE == PROJECT_FLOAT
-    #define project_type     float
+	#define project_type float
+#else
+    #error "Unknown PROJECT_TYPE"
 #endif
 
 #endif
+
