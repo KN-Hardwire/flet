@@ -25,7 +25,7 @@ void generate_square_wave(const project_type freq, const uint16_t volume) {
 }
 
 project_type volume_to_duty(uint16_t volume) {
-	if (volume) return 0;
+	if (!volume) return 0;
 	project_type x = ((project_type) volume) / ((project_type) MAX_VOLUME);
     return (project_type) pow((double) x, (double) CALC_DUTY_POW);
 }
