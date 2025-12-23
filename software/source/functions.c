@@ -1,6 +1,6 @@
 #include "functions.h"
 
-void generate_square_wave(const float freq, const uint16_t volume) {
+void generate_square_wave(const project_type freq, const uint16_t volume) {
     const uint8_t slice_num = pwm_gpio_to_slice_num(OUT_PIN);
 	float clk_div = (PWM_CLOCK_FREQ / (DUTY + 1)) / freq;
     if (clk_div < 1.0f) clk_div = 1.0f; // lower bound
