@@ -12,7 +12,7 @@ void generate_square_wave(const project_type freq, const uint16_t volume) {
 	#endif
 	
 	#if DEBUG_MODE == 1
-		printf("volume: %d\n", volume);
+		(void) printf("volume: %d\n", volume);
 	#endif
 
 	project_type out_duty = volume_to_duty(volume) * (DUTY / 2);
@@ -50,7 +50,7 @@ uint16_t get_volume(void) {
 	buffer_index = (buffer_index + 1) % DIFF_BUFFER_SIZE;
 
 	#if DEBUG_MODE == 1
-		printf("diff: %d\n", new_diff);
+		(void) printf("diff: %d\n", new_diff);
 	#endif
 
 	if (new_diff > DIFF_THRESHOLD) {
@@ -61,7 +61,7 @@ uint16_t get_volume(void) {
 	}
 
 	#if DEBUG_MODE == 1
-		printf("diff count: %d\n", diff_count);
+		(void) printf("diff count: %d\n", diff_count);
 	#endif
 
 	last_adc_measure = new_adc_measure;
